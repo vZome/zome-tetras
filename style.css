@@ -34,11 +34,6 @@ html {
   font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
-thead th,
-tfoot th {
-  font-family: "Rock Salt", cursive;
-}
-
 th {
   letter-spacing: 2px;
 }
@@ -60,8 +55,6 @@ tfoot th {
 thead,
 tfoot {
   background: whitesmoke;
-  color: white;
-  text-shadow: 1px 1px 1px black;
 }
 
 thead th,
