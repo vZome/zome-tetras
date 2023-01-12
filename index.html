@@ -22,7 +22,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr onClick="switchModel()">
+      <tr onClick="switchModel('https://raw.githubusercontent.com/vorth/vzome-sharing/main/2023/01/06/16-00-22-zome-tetra-17-really/zome-tetra-17-really.vZome')">
         <td>17</td>
         <td>4</td>
         <td>6</td>
@@ -43,9 +43,9 @@
   </p>
 
   <script>
-    function switchModel( e ) {
+    function switchModel( url ) {
       const viewer = document.getElementById( "viewer" );
-      viewer.src = 'https://raw.githubusercontent.com/vorth/vzome-sharing/main/2023/01/06/16-00-22-zome-tetra-17-really/zome-tetra-17-really.vZome';
+      viewer.src = url;
     }
   </script>
 
