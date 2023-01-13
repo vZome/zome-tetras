@@ -6,7 +6,7 @@ body {
 }
 
 /*
-  This CSS copied largely as-is from:
+  This CSS originally copied largely as-is from:
 
       https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables
 */
@@ -21,24 +21,43 @@ table {
 }
 
 thead th:nth-child(1) {
-  width: 30%;
+  width: 10%;
 }
 
-thead th:nth-child(2) {
-  width: 20%;
-}
-
-thead th:nth-child(3) {
-  width: 15%;
-}
-
-thead th:nth-child(4) {
-  width: 35%;
+thead th {
+  width: 9%;
 }
 
 th,
 td {
-  padding: 20px;
+  border: 1px solid gray;
+  padding: 3px;
+}
+
+th.ident, td.done {
+  background-color: rgb(220, 255, 220);
+  font-weight: bold;
+}
+
+td.todo {
+  background-color: rgb(255, 242, 242);
+  font-style: italic;
+}
+
+th.balls, td.balls {
+  background-color: rgb(255, 255, 255);
+}
+
+th.blu, td.blu {
+  background-color: rgb(128, 186, 202);
+}
+
+th.yel, td.yel {
+  background-color: rgb(248, 208, 128);
+}
+
+th.red, td.red {
+  background-color: rgb(215, 128, 128);
 }
 
 /* typography */
