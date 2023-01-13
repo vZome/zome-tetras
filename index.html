@@ -9,45 +9,121 @@
   <!-- Enable the vzome-viewer custom element -->
   <script type="module" src="https://www.vzome.com/modules/vzome-viewer.js"></script>
 
-  <link href="style.css" rel="stylesheet" />
-</head>
-<body>
+  <script type="module"> // Use type="module" so we can import the json easily
+    import models from './tetra-challenge-models.json' assert { type: 'json' };
 
-  <table>
-    <thead>
-      <tr>
-        <td>Number</td>
-        <td># Balls</td>
-        <td># Struts</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr onClick="switchModel('https://raw.githubusercontent.com/vorth/vzome-sharing/main/2023/01/06/16-00-22-zome-tetra-17-really/zome-tetra-17-really.vZome')">
-        <td>17</td>
-        <td>4</td>
-        <td>6</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <figure style="width: 87%; margin: 5%">
-    <vzome-viewer id="viewer" style="width: 100%; height: 60vh" src="vZomeLogo.vZome" >
-    </vzome-viewer>
-    <figcaption style="text-align: center; font-style: italic;">
-      Select a row of the table
-    </figcaption>
-  </figure>
-  
-  <p>
-    <a href="https://github.com/vZome/zome-tetras/blob/main/index.html">Page Source<a/>                                                                                  
-  </p>
+    const table = document.getElementById( "partsTable" );
+    const tbody = table.createTBody();
+    for (let tetra of models.partsList) {
+      const id = tetra.id;
+      const tr = tbody.insertRow();
+      const url = tetra.url;
+      if(url) {
+        tr.addEventListener("click",
+		      function (event) { 
+            switchModel(url);
+		      });
+      } else {
+        tr.addEventListener("click",
+		     function (event) { 
+           alert("Tetrahedron #" + id + " is not available.\n\nPlease help us collect the full set.");
+		     });
+      }
+      // Id column
+      let td = tr.insertCell();
+      td.className = url ? "ident done" : "ident todo";
+      td.innerHTML = id;
+      // Balls column
+      td = tr.insertCell();
+      td.className = "balls";
+      const ballsTd = td; // populate later
+      let nStruts = 0;
+      // Blue columns
+      for(let i = 0; i < 3; i++) {
+        td = tr.insertCell();
+        td.className = "blu";
+        const num = tetra.blu[i];
+        if(num != 0) {
+          td.innerHTML = num;
+          nStruts += num;
+        }
+      }
+      // Yellow columns
+      for(let i = 0; i < 3; i++) {
+        td = tr.insertCell();
+        td.className = "yel";
+        const num = tetra.yel[i];
+        if(num != 0) {
+          td.innerHTML = num;
+          nStruts += num;
+        }
+      }
+      // Red columns
+      for(let i = 0; i < 3; i++) {
+        td = tr.insertCell();
+        td.className = "red";
+        const num = tetra.red[i];
+        if(num != 0) {
+          td.innerHTML = num;
+          nStruts += num;
+        }
+      }
+      // The number of balls is not in the json data. 
+      // It is calculated from the number of struts 
+      // and also serves as a simplistic checksum
+      // using Euler's formula as applied to tetrahedra: 
+      //   F + V = E + 2
+      // Where F = 4, E = nStruts and V = the number of balls shown.
+      ballsTd.innerHTML = nStruts - 2;
+    }
 
-  <script>
     function switchModel( url ) {
       const viewer = document.getElementById( "viewer" );
       viewer.src = url;
     }
-  </script>
+
+  </script>  
+
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <h1>
+    Zometool Tetrahedra Challenge
+  </h1>
+  
+  <p>
+    A collaborative effort to model all tetrahedra that are buildable with standard zometool struts.
+  </p>
+
+  <figure style="width: 87%; margin: 5%">
+    <vzome-viewer id="viewer" style="width: 100%; height: 60vh" src="vZomeLogo.vZome" >
+    </vzome-viewer>
+    <figcaption style="text-align: center; font-style: italic;">
+      Select a row from the table below
+    </figcaption>
+  </figure>
+  
+  <table id="partsTable">
+    <thead>
+      <tr>
+        <th class="ident">Id</th>
+        <th class="balls">Balls</th>
+        <th class="blu">B0</th>
+        <th class="blu">B1</th>
+        <th class="blu">B2</th>
+        <th class="yel">Y0</th>
+        <th class="yel">Y1</th>
+        <th class="yel">Y2</th>
+        <th class="red">R0</th>
+        <th class="red">R1</th>
+        <th class="red">R2</th>
+      </tr>
+    </thead>
+  </table>
+  
+  <p>
+    <a href="https://github.com/vZome/zome-tetras/blob/main/index.html">Page Source</a>                                                                                  
+  </p>
 
 </body>
 </html>
