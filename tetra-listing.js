@@ -6,6 +6,7 @@ for (const tetra of models.partsList) {
     const id = tetra.id;
     const url = tetra.url;
     const tr = tbody.insertRow();
+    fillRow(tr, tetra);
     tr.addEventListener("click",
         function (event) { 
             if(url) {
@@ -13,7 +14,20 @@ for (const tetra of models.partsList) {
             } else {
                 alert("Tetrahedron #" + id + " is not available.\n\nPlease help us collect the full set.");
             }
-        });
+            const currentTr = document.getElementById( "current" );
+            currentTr.innerHTML = "";
+            fillRow(currentTr, tetra);
+        }
+    );
+}
+
+function fillRow(tr, tetra) {
+  const id = tetra.id;
+  const url = tetra.url;
+  if(!tr.id) {
+    tr.id = "tetra-" + id;
+  }
+  tr.setAttribute("data-id", id);
   // Id column
   let td = tr.insertCell();
   td.className = url ? "ident done" : "ident todo";

@@ -74,6 +74,10 @@ td {
   letter-spacing: 1px;
 }
 
+thead td {
+  text-align: center;
+}
+
 tbody td {
   text-align: center;
 }
