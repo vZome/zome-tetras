@@ -1,10 +1,41 @@
 
-body {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 840px;
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0; /* This is essential to avoid a small white border around the whole main div. */
 }
 
+.main-grid {
+  display: grid;
+  grid-template-columns: minmax( 0, 3fr ) minmax( 0, 5fr );
+  grid-template-rows: min-content minmax( 0, 1fr );
+  grid-template-areas:
+    "intro intro"
+    "table viewer";
+  gap: 7px;
+  height: 100vh;
+}
+
+.intro {
+  grid-area: intro;
+  max-width: 800px;
+  margin: auto;
+}
+
+.viewer {
+  grid-area: viewer;
+  width: 100%;
+}
+
+#viewer {
+  width: 99%;
+  height: 99%;
+}
+
+.table {
+  grid-area: table; /* added for the grid above */
+  overflow: auto;
+}
 /*
   This CSS originally copied largely as-is from:
 
@@ -17,7 +48,6 @@ table {
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
-  border: 3px solid purple;
 }
 
 thead th:nth-child(1) {
@@ -86,6 +116,7 @@ tfoot th {
 
 thead,
 tfoot {
+  /* position:fixed; */
   background: whitesmoke;
 }
 
@@ -95,7 +126,6 @@ tfoot td {
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.5)
+    rgba(0, 0, 0, 0.2)
   );
-  border: 3px solid blue;
 }
