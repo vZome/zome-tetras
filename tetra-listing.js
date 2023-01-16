@@ -2,9 +2,10 @@ import models from './tetra-challenge-models.json' assert { type: 'json' };
 
 const table = document.getElementById( "partsTable" );
 const tbody = table.createTBody();
-for (const tetra of models.partsList) {
+for (const tetra of models) {
     const id = tetra.id;
     const url = tetra.url;
+    const chiral = (tetra.chiral === "true");
     const tr = tbody.insertRow();
     fillRow(tr, tetra);
     tr.addEventListener("click",
@@ -24,6 +25,7 @@ for (const tetra of models.partsList) {
 function fillRow(tr, tetra) {
   const id = tetra.id;
   const url = tetra.url;
+  const chiral = (tetra.chiral === "true");
   if(!tr.id) {
     tr.id = "tetra-" + id;
   }
@@ -31,6 +33,9 @@ function fillRow(tr, tetra) {
   // Id column
   let td = tr.insertCell();
   td.className = url ? "ident done" : "ident todo";
+  if(chiral) {
+    td.className += " chiral";
+  }
   td.innerHTML = id;
   // Balls column
   td = tr.insertCell();

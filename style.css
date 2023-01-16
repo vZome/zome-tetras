@@ -44,6 +44,15 @@ td.todo {
   font-style: italic;
 }
 
+td.chiral::before {
+  content: '*';
+}
+
+#asterisk {
+  font-size: .8rem;
+  font-weight: bold;
+}
+
 th.balls, td.balls {
   background-color: rgb(255, 255, 255);
 }
