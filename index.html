@@ -10,7 +10,26 @@
   <script type="module" src="https://www.vzome.com/modules/vzome-viewer.js"></script>
 
   <!-- populate the table and hook the click events -->
-  <script type="module" src="./tetra-listing.js"></script>  
+  <script type="module" src="./tetra-listing.js"></script> 
+  
+  <script>
+    function adjustPosition(step) {
+      const id = document.getElementById("current").getAttribute("data-id");
+      const target = "tetra-" + (parseInt(id) + step);
+      const tetra = document.getElementById( target );
+      if(tetra) {
+        tetra.click();
+      }
+    }
+
+    function prevButton() {
+      adjustPosition(-1);
+    }
+
+    function nextButton() {
+      adjustPosition(1);
+    }
+  </script>
 
   <link href="style.css" rel="stylesheet">
 </head>
@@ -18,10 +37,11 @@
   <div class="main-grid">
     <div class="intro">
       <h1>
-        Zometool Tetrahedra Challenge
+        Zometool Tetrahedra Challenge Solution
       </h1>    
       <p>
-        A collaborative effort to model all tetrahedra that are buildable with standard zometool struts.
+        Select a row in the table to see the tetrahedron.  Rows marked with an asterisk (*)
+        represent chiral tetrahedra; they have both left-handed and right-handed forms.
       </p>
       <p>
         <a href="https://github.com/vZome/zome-tetras/">Page Source</a>                                                                                  
@@ -31,6 +51,27 @@
     <div class="table">
       <table id="partsTable">
         <thead>
+          <tr id="current" data-id="0">
+            <td class="ident done">vZome</td>
+            <td class="balls">4</td>
+            <td class="blu"></td>
+            <td class="blu"></td>
+            <td class="blu"></td>
+            <td class="yel">1</td>
+            <td class="yel"></td>
+            <td class="yel"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+          </tr>
+          <tr>
+            <td colspan="11">
+              <div id="nav">
+                <button id="nextBtn"onclick='nextButton()'> Next &gt </button>
+                <button id="prevBtn" onclick='prevButton()'> &lt Prev </button>
+              </div>
+            </td>
+          </tr>
           <tr>
             <th class="ident">Id</th>
             <th class="balls">Balls</th>

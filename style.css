@@ -74,6 +74,10 @@ td.todo {
   font-style: italic;
 }
 
+td.chiral::before {
+  content: '*';
+}
+
 th.balls, td.balls {
   background-color: rgb(255, 255, 255);
 }
@@ -102,6 +106,10 @@ th {
 
 td {
   letter-spacing: 1px;
+}
+
+thead td {
+  text-align: center;
 }
 
 tbody td {
