@@ -125,7 +125,7 @@ tfoot th {
 thead,
 tfoot {
   /* position:fixed; */
-  background: whitesmoke;
+  background: black;
 }
 
 thead th,
