@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="14" field="golden" version="7.1">
-  <EditHistory editNumber="310" lastStickyEdit="-1">
+  <EditHistory editNumber="314" lastStickyEdit="-1">
     <StrutCreation anchor="0 0 0 0 0 0" dir="yellow" index="9" len="1 2"/>
     <StrutCreation anchor="0 0 0 0 0 0" index="10" len="4 6"/>
     <BeginBlock/>
@@ -311,6 +311,10 @@
     <SelectManifestation point="2 3 2 3 2 3"/>
     <EndBlock/>
     <setItemColor blue="255" green="255" red="255"/>
+    <SelectManifestation endSegment="2 3 2 3 2 3" startSegment="-1 -2 2 3 -3 -5"/>
+    <Delete/>
+    <StrutCreation anchor="-1 -2 2 3 -3 -5" dir="red" index="2" len="1 2"/>
+    <StrutCreation anchor="0 0 2 3 -1 -2" dir="red" index="2" len="2 3"/>
   </EditHistory>
   <notes/>
   <sceneModel ambientLight="41,41,41" background="175,200,220">

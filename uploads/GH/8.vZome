@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="14" field="golden" version="7.1">
-  <EditHistory editNumber="92" lastStickyEdit="-1">
+  <EditHistory editNumber="98" lastStickyEdit="-1">
     <StrutCreation anchor="0 0 0 0 0 0" index="11" len="2 4"/>
     <StrutCreation anchor="2 3 1 1 1 2" index="26" len="2 4"/>
     <BeginBlock/>
@@ -92,7 +92,13 @@
     <setItemColor blue="255" green="255" red="255"/>
     <SelectAll originLast="true"/>
     <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale up"/>
+    <BeginBlock/>
     <DeselectAll/>
+    <SelectManifestation endSegment="6 10 0 0 0 0" startSegment="0 0 0 0 0 0"/>
+    <EndBlock/>
+    <Delete/>
+    <StrutCreation anchor="0 0 0 0 0 0" index="0" len="2 4"/>
+    <StrutCreation anchor="2 4 0 0 0 0" index="0" len="4 6"/>
   </EditHistory>
   <notes/>
   <sceneModel ambientLight="41,41,41" background="175,200,220">
