@@ -190,7 +190,9 @@
     <SelectManifestation point="-1/3 -2/3 2 3 7/3 3"/>
     <EndBlock/>
     <JoinPoints closedLoop="false"/>
-    <Midpoint/>
+    <Midpoint>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Midpoint>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation point="2/3 4/3 0 0 4/3 2"/>
@@ -225,11 +227,11 @@
   <Viewing>
     <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
       <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-      <UpDirection x="-0.8158237934112549" y="-0.5590237975120544" z="0.14809252321720123"/>
-      <LookDirection x="-0.2852203845977783" y="0.16617430746555328" z="-0.9439539313316345"/>
+      <UpDirection x="-0.6881909966468811" y="-0.5877852439880371" z="0.4253253936767578"/>
+      <LookDirection x="-0.525731086730957" y="0.0" z="-0.8506507873535156"/>
     </ViewModel>
   </Viewing>
-  <SymmetrySystem name="icosahedral" renderingStyle="solid connectors">
+  <SymmetrySystem name="icosahedral" renderingStyle="lifelike">
     <Direction color="0,118,149" name="blue" orbit="[[0,0,1],[0,0,1]]"/>
     <Direction color="0,141,54" name="green" orbit="[[2,-1,1],[5,-3,1]]"/>
     <Direction color="154,117,74" name="sand" orbit="[[-8,5,1],[5,-3,1]]"/>
