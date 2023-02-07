@@ -448,7 +448,7 @@
       <LookDirection x="0.0" y="-0.8506507873535156" z="0.525731086730957"/>
     </ViewModel>
   </Viewing>
-  <SymmetrySystem name="icosahedral" renderingStyle="solid connectors">
+  <SymmetrySystem name="icosahedral" renderingStyle="lifelike">
     <Direction color="0,118,149" name="blue" orbit="[[0,0,1],[0,0,1]]"/>
     <Direction color="0,141,54" name="green" orbit="[[2,-1,1],[5,-3,1]]"/>
     <Direction color="154,117,74" name="sand" orbit="[[-8,5,1],[5,-3,1]]"/>
