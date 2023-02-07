@@ -1,5 +1,7 @@
 import models from './tetra-challenge-models.json' assert { type: 'json' };
 
+let selectedRow;
+
 const table = document.getElementById( "partsTable" );
 const tbody = table.createTBody();
 for (const tetra of models) {
@@ -15,9 +17,11 @@ for (const tetra of models) {
             } else {
                 alert("Tetrahedron #" + id + " is not available.\n\nPlease help us collect the full set.");
             }
-            const currentTr = document.getElementById( "current" );
-            currentTr.innerHTML = "";
-            fillRow(currentTr, tetra);
+            if ( selectedRow ) selectedRow.className = "";
+            selectedRow = tr;
+            selectedRow.className = "selected";
+            const index = document.getElementById( "index" );
+            index.textContent = id;
         }
     );
 }
@@ -39,7 +43,6 @@ function fillRow(tr, tetra) {
   td.innerHTML = id;
   // Balls column
   td = tr.insertCell();
-  td.className = "balls";
   const ballsTd = td; // populate later
   // strut columns
   let nStruts = listStrutsByColor(tr, tetra.blu, "blu");

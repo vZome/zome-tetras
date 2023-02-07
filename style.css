@@ -23,6 +23,7 @@ html, body {
 }
 
 .viewer {
+  position: relative;
   grid-area: viewer;
   width: 100%;
 }
@@ -30,6 +31,13 @@ html, body {
 #viewer {
   width: 99%;
   height: 99%;
+}
+
+.viewer h1 {
+  position: absolute;
+  z-index: 300;
+  top: 1rem;
+  left: 3rem;
 }
 
 .table {
@@ -72,6 +80,11 @@ th.ident, td.done {
 td.todo {
   background-color: rgb(255, 242, 242);
   font-style: italic;
+}
+
+tr.selected td {
+  background-color: rgb(71, 95, 70);
+  color: white;
 }
 
 td.chiral::before {
