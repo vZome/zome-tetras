@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="18" field="golden" version="7.1">
-  <EditHistory editNumber="88" lastStickyEdit="75">
+<vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="19" field="golden" version="7.1">
+  <EditHistory editNumber="125" lastStickyEdit="118">
     <StrutCreation anchor="0 0 0 0 0 0" dir="yellow" index="9" len="1 1"/>
     <StrutCreation anchor="0 0 0 0 0 0" dir="yellow" index="5" len="1 1"/>
     <BeginBlock/>
@@ -54,11 +54,11 @@
     <SelectManifestation point="2 3 2 3 2 3"/>
     <EndBlock/>
     <setItemColor blue="255" green="255" red="255"/>
-    <SelectAll originLast="true"/>
+    <SelectAll/>
     <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
     <BeginBlock/>
     <DeselectAll/>
-    <SelectAll originLast="true"/>
+    <SelectAll/>
     <EndBlock/>
     <BookmarkTool name="tool-0"/>
     <BeginBlock/>
@@ -74,7 +74,9 @@
     <SelectManifestation point="1 2 -2 -3 3 5"/>
     <SelectManifestation point="1 2 -1 -2 1 2"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <MirrorTool name="tool-2"/>
     <ApplyTool copyColors="true" name="bookmark.builtin/ball at origin" selectInputs="true"/>
     <DeselectAll/>
@@ -93,6 +95,45 @@
     </SelectManifestation>
     <EndBlock/>
     <Delete/>
+    <BeginBlock/>
+    <SelectManifestation point="1 2 1 2 1 2"/>
+    <SelectManifestation point="1 2 -2 -3 3 5"/>
+    <SelectManifestation point="1 2 -1 -2 1 2"/>
+    <EndBlock/>
+    <NewCentroid/>
+    <BeginBlock/>
+    <SelectManifestation point="3 6 1 2 1 2"/>
+    <SelectManifestation point="3 6 -2 -3 3 5"/>
+    <SelectManifestation point="3 6 -1 -2 1 2"/>
+    <EndBlock/>
+    <NewCentroid/>
+    <BeginBlock/>
+    <SelectManifestation point="1 2 -2/3 -1 5/3 3"/>
+    <SelectManifestation point="3 6 -2/3 -1 5/3 3"/>
+    <EndBlock/>
+    <JoinPoints closedLoop="false"/>
+    <Midpoint>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Midpoint>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="1 2 -2/3 -1 5/3 3"/>
+    <SelectManifestation endSegment="3 6 -2/3 -1 5/3 3" startSegment="1 2 -2/3 -1 5/3 3"/>
+    <SelectManifestation point="3 6 -2/3 -1 5/3 3"/>
+    <EndBlock/>
+    <Delete/>
+    <BeginBlock/>
+    <SelectManifestation point="2 4 -2/3 -1 5/3 3"/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <EndBlock/>
+    <TranslationTool name="tool-3"/>
+    <SelectAll/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="tool-3"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <EndBlock/>
+    <Delete/>
   </EditHistory>
   <notes/>
   <sceneModel ambientLight="41,41,41" background="175,200,220">
@@ -103,11 +144,11 @@
   <Viewing>
     <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
       <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-      <UpDirection x="0.050043731927871704" y="0.8675568103790283" z="-0.49481436610221863"/>
-      <LookDirection x="-0.09490101784467697" y="-0.48906394839286804" z="-0.8670751452445984"/>
+      <UpDirection x="0.0" y="-0.525731086730957" z="0.8506507873535156"/>
+      <LookDirection x="0.0" y="-0.8506507873535156" z="-0.525731086730957"/>
     </ViewModel>
   </Viewing>
-  <SymmetrySystem name="icosahedral" renderingStyle="solid connectors">
+  <SymmetrySystem name="icosahedral" renderingStyle="lifelike">
     <Direction color="0,118,149" name="blue" orbit="[[0,0,1],[0,0,1]]"/>
     <Direction color="0,141,54" name="green" orbit="[[2,-1,1],[5,-3,1]]"/>
     <Direction color="154,117,74" name="sand" orbit="[[-8,5,1],[5,-3,1]]"/>
@@ -148,5 +189,6 @@
     <Tool copyColors="true" deleteInputs="false" id="tool-0" label="bookmark 0" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="true" id="tool-1" label="translation 1" selectInputs="false"/>
     <Tool copyColors="true" deleteInputs="false" id="tool-2" label="mirror 2" selectInputs="false"/>
+    <Tool copyColors="true" deleteInputs="true" id="tool-3" label="translation 3" selectInputs="false"/>
   </Tools>
 </vzome:vZome>
