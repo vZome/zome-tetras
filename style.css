@@ -17,7 +17,6 @@
   --color-yel-panel: rgb(248, 208, 128);
   --color-red-panel: rgb(215, 128, 128);
   --color-grn-panel: rgb(127, 198, 154);
-  }
 }
 
 html, body {
@@ -64,7 +63,6 @@ html, body {
 .table {
   grid-area: table; /* added for the grid above */
   overflow: auto;
-  cursor: default; /* don't show the "I-beam" text cursor */
 }
 /*
   This CSS originally copied largely as-is from:
@@ -75,9 +73,10 @@ html, body {
 /* spacing */
 
 table {
+  border-collapse: collapse;
+  cursor: default; /* disable the "I-beam" text cursor */
   table-layout: fixed;
   width: 100%;
-  border-collapse: collapse;
 }
 
 thead th:nth-child(1) {
