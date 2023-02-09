@@ -54,6 +54,7 @@ html, body {
 }
 
 .viewer h1 {
+  cursor: default; /* disable the "I-beam" text cursor */
   position: absolute;
   z-index: 300;
   top: 1rem;
