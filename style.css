@@ -64,6 +64,7 @@ html, body {
 .table {
   grid-area: table; /* added for the grid above */
   overflow: auto;
+  cursor: default; /* don't show the "I-beam" text cursor */
 }
 /*
   This CSS originally copied largely as-is from:
