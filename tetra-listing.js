@@ -44,6 +44,7 @@ function fillRow(tr, tetra) {
   // Balls column
   td = tr.insertCell();
   const ballsTd = td; // populate later
+  ballsTd.className = "balls";
   // strut columns
   let nStruts = listStrutsByColor(tr, tetra.blu, "blu");
   nStruts += listStrutsByColor(tr, tetra.yel, "yel");

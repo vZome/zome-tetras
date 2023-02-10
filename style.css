@@ -1,4 +1,24 @@
 
+:root {
+  --color-todo: rgb(255, 242, 242);
+
+  --color-ident: rgb(175, 200, 220); /* same as vZome default background */
+  --color-ident-selected: rgb(87, 100, 110); /* each RGB channel is 1/2 of unselected value */
+  
+  --color-balls: rgb(255, 255, 255);
+  --color-balls-selected: rgb(127, 127, 127);
+
+  --color-blu-strut: rgb(0, 118, 189);
+  --color-yel-strut: rgb(240, 160, 0);
+  --color-red-strut: rgb(175, 0, 0);
+  --color-grn-strut: rgb(0, 141, 54);
+
+  --color-blu-panel: rgb(128, 186, 202);
+  --color-yel-panel: rgb(248, 208, 128);
+  --color-red-panel: rgb(215, 128, 128);
+  --color-grn-panel: rgb(127, 198, 154);
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -34,6 +54,7 @@ html, body {
 }
 
 .viewer h1 {
+  cursor: default; /* disable the "I-beam" text cursor */
   position: absolute;
   z-index: 300;
   top: 1rem;
@@ -53,9 +74,10 @@ html, body {
 /* spacing */
 
 table {
+  border-collapse: collapse;
+  cursor: default; /* disable the "I-beam" text cursor */
   table-layout: fixed;
   width: 100%;
-  border-collapse: collapse;
 }
 
 thead th:nth-child(1) {
@@ -73,41 +95,73 @@ td {
 }
 
 th.ident, td.done {
-  background-color: rgb(220, 255, 220);
+  background-color: var(--color-ident);
   font-weight: bold;
 }
 
 td.todo {
-  background-color: rgb(255, 242, 242);
+  background-color: var(--color-todo);
   font-style: italic;
 }
 
-tr.selected td {
-  background-color: rgb(71, 95, 70);
-  color: white;
+th.balls, td.balls {
+  background-color: var(--color-balls);
 }
+
+th.blu, td.blu {
+  background-color: var(--color-blu-panel);
+}
+
+th.yel, td.yel {
+  background-color: var(--color-yel-panel);
+}
+
+th.red, td.red {
+  background-color: var(--color-red-panel);
+}
+
+th.grn, td.grn {
+  background-color: var(--color-grn-panel);
+}
+
+/* selected table row */
+
+tr.selected,
+tr.selected td {
+  border: 1px solid black;
+  color: white;
+  font-weight: bold;
+}
+
+tr.selected td.done {
+  background-color: var(--color-ident-selected)
+}
+
+tr.selected td.balls {
+  background-color: var(--color-balls-selected);
+}
+
+tr.selected td.blu {
+  background-color: var(--color-blu-strut);
+}
+
+tr.selected td.yel {
+  background-color: var(--color-yel-strut);
+}
+
+tr.selected  td.red {
+  background-color: var(--color-red-strut);
+}
+
+tr.selected  td.grn {
+  background-color: var(--color-grn-strut);
+}
+
+/* typography */
 
 td.chiral::before {
   content: '*';
 }
-
-th.balls, td.balls {
-  background-color: rgb(255, 255, 255);
-}
-
-th.blu, td.blu {
-  background-color: rgb(128, 186, 202);
-}
-
-th.yel, td.yel {
-  background-color: rgb(248, 208, 128);
-}
-
-th.red, td.red {
-  background-color: rgb(215, 128, 128);
-}
-
-/* typography */
 
 html {
   font-family: "helvetica neue", helvetica, arial, sans-serif;
