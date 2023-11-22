@@ -1,4 +1,4 @@
-import models from './tetra-challenge-models.json' assert { type: 'json' };
+import { models } from './tetra-challenge-models.js';
 
 let selectedRow;
 

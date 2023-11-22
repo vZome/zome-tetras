@@ -1,4 +1,4 @@
-[
+export const models = [
   { "id": 1,  "chiral":"true",   "blu":[0, 0, 1], "yel":[0, 1, 1], "red":[1, 1, 1],  "url":"uploads/jh/1C.vZome" },
   { "id": 2,  "chiral":"true",   "blu":[0, 0, 2], "yel":[0, 0, 2], "red":[1, 1, 1],  "url":"uploads/jh/2C.vZome" },
   { "id": 3,  "chiral":"true",   "blu":[0, 0, 1], "yel":[0, 1, 1], "red":[1, 2, 0],  "url":"uploads/jh/3C.vZome" },
