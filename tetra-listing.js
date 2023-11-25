@@ -5,30 +5,28 @@ let selectedRow;
 const table = document.getElementById( "partsTable" );
 const tbody = table.createTBody();
 for (const tetra of models) {
-    const id = tetra.id;
-    const url = tetra.url;
-    const chiral = (tetra.chiral === "true");
     const tr = tbody.insertRow();
     fillRow(tr, tetra);
-    tr.addEventListener("click",
-        function (event) { 
-            if(url) {
-                switchModel(url);
-            } else {
-                alert("Tetrahedron #" + id + " is not available.\n\nPlease help us collect the full set.");
-            }
-            if ( selectedRow ) selectedRow.className = "";
-            selectedRow = tr;
-            selectedRow.className = "selected";
-            const index = document.getElementById( "index" );
-            index.textContent = id;
-        }
-    );
+    tr.addEventListener("click", () => selectTetra( tetra, tr ) );
+}
+selectTetra( models[ 0 ], tbody .rows[ 0 ] );
+
+function selectTetra( tetra, tr ) {
+  const { url, id } = tetra;
+  if(url) {
+    switchModel(url);
+  } else {
+      alert("Tetrahedron #" + id + " is not available.\n\nPlease help us collect the full set.");
+  }
+  if ( selectedRow ) selectedRow.className = "";
+  selectedRow = tr;
+  selectedRow.className = "selected";
+  const index = document.getElementById( "index" );
+  index.textContent = id;
 }
 
 function fillRow(tr, tetra) {
-  const id = tetra.id;
-  const url = tetra.url;
+  const { id, url } = tetra;
   const chiral = (tetra.chiral === "true");
   if(!tr.id) {
     tr.id = "tetra-" + id;
