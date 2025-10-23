@@ -26,7 +26,6 @@
   <meta property="og:url" content="https://vzome.github.io/zome-tetras/"/>
   <link rel="canonical"      href="https://vzome.github.io/zome-tetras/">
   
-  
   <!-- Enable the vzome-viewer custom element -->
   <script type="module" src="https://www.vzome.com/modules/vzome-viewer.js"></script>
 
@@ -39,8 +38,11 @@
   <div class="main-grid">
     <div class="intro">
       <h1>
-        <a href="https://zometool.com" target="_blank" rel="noopener">Zometool</a> Tetrahedra Challenge Solution
-      </h1>    
+        <a href="https://zometool.com" target="_blank" rel="noopener">Zometool</a> Tetrahedra Challenge
+      </h1>  
+      <h3>
+        Solutions to the 'Tetra Challenge' on page 5 of the <a href="https://www.zometool.com/content/Manual2.3web.pdf" target="_blank" rel="noopener">Zometool manual</a>
+      </h3>  
       <p>
         Select a row in the table to see the tetrahedron.  Rows marked with an asterisk (*)
         represent chiral tetrahedra; they have both left-handed and right-handed forms.
@@ -71,6 +73,22 @@
           </tr>
         </thead>
       </table>
+      <div class="footer">
+        <p>
+        The number of balls shown is copied from the Zometool manual.
+        Several of the tetrahedra use more balls than just the 4 at their vertices. 
+        The manual calls for #2 and #8 to use 5 balls,
+        but they actually require only 4 balls. 
+        One ball can be omitted by replacing the 
+        R1+R2 or B1+B2 edge with the equivalent R3 or B3 strut.
+        </p>
+        <p>
+        In all other cases where more than 4 balls are shown,
+        the additional balls are actually necessary 
+        because they join two struts of the same length 
+        to produce edges that are twice as long as a standard strut.
+        </p>
+      </div>
     </div>
 
     <div class="viewer">

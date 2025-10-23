@@ -42,6 +42,11 @@ html, body {
   margin: auto;
 }
 
+.footer {
+    padding-left: 1em;
+    padding-right: 0.5em;
+}
+
 .viewer {
   position: relative;
   grid-area: viewer;
