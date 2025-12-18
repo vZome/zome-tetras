@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="111" field="golden" version="7.1">
-  <EditHistory editNumber="218" lastStickyEdit="216">
+  <EditHistory editNumber="226" lastStickyEdit="216">
     <StrutCreation anchor="0 0 0 0 0 0" index="37" len="2 4"/>
     <StrutCreation anchor="0 0 0 0 0 0" index="11" len="2 4"/>
     <BeginBlock/>
@@ -181,7 +181,9 @@
       <polygonVertex at="2 19/6 3/2 17/6 1/6 1/3"/>
       <polygonVertex at="0 1/6 -3/2 -13/6 7/6 7/3"/>
     </SelectManifestation>
-    <Hide/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
     <SelectManifestation point="7/4 8/3 -3/4 -11/12 2/3 4/3"/>
     <ApplyTool copyColors="true" name="bookmark.builtin/ball at origin" selectInputs="true"/>
     <TranslationTool name="tool-4"/>
@@ -226,7 +228,9 @@
     <ApplyTool copyColors="true" name="tool-6" selectInputs="true"/>
     <DeselectAll/>
     <ApplyTool copyColors="true" name="tool-5" selectInputs="true"/>
-    <Hide/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
     <Snapshot id="0"/>
     <ApplyTool copyColors="true" name="tool-5" selectInputs="true"/>
     <DeselectAll/>
@@ -234,7 +238,19 @@
     <Delete/>
     <Snapshot id="1"/>
     <ApplyTool copyColors="true" name="tool-6" selectInputs="true"/>
+    <BeginBlock/>
     <DeselectAll/>
+    <SelectManifestation>
+      <polygonVertex at="9/4 7/2 -3/4 -5/4 1/2 1"/>
+      <polygonVertex at="1/4 1/2 9/4 15/4 -1/2 -1"/>
+      <polygonVertex at="-7/4 -5/2 -3/4 -5/4 1/2 1"/>
+    </SelectManifestation>
+    <DeselectAll/>
+    <EndBlock/>
+    <ApplyTool copyColors="true" name="tool-5" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-6" selectInputs="true"/>
+    <Delete/>
   </EditHistory>
   <notes>
     <page snapshot="0" title="Faces">

@@ -271,7 +271,9 @@
       <polygonVertex at="-3/2 -5/2 -1 -7/4 -3/4 -1"/>
     </SelectManifestation>
     <EndBlock/>
-    <Hide/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
     <ShowHidden/>
     <DeselectAll/>
     <ApplyTool copyColors="true" name="tool-8" selectInputs="true"/>
@@ -286,12 +288,16 @@
     <ApplyTool copyColors="true" name="tool-11" selectInputs="true"/>
     <DeselectAll/>
     <ApplyTool copyColors="true" name="tool-10" selectInputs="true"/>
-    <Hide/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
     <Snapshot id="0"/>
     <ApplyTool copyColors="true" name="tool-10" selectInputs="true"/>
     <DeselectAll/>
     <ApplyTool copyColors="true" name="tool-11" selectInputs="true"/>
-    <Hide/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
     <Snapshot id="1"/>
     <ApplyTool copyColors="true" name="tool-11" selectInputs="true"/>
     <BeginBlock/>
@@ -302,13 +308,17 @@
       <polygonVertex at="-3/2 -5/2 -1 -7/4 -3/4 -1"/>
     </SelectManifestation>
     <EndBlock/>
-    <Hide/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
     <ApplyTool copyColors="true" name="tool-0" selectInputs="true"/>
     <Delete/>
     <ShowHidden/>
     <DeselectAll/>
     <ApplyTool copyColors="true" name="tool-11" selectInputs="true"/>
-    <Hide/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
     <Snapshot id="2"/>
   </EditHistory>
   <notes>
@@ -335,7 +345,7 @@
     <directionalLight color="30,30,30" x="0.0" y="0.0" z="-1.0"/>
   </sceneModel>
   <Viewing>
-    <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="true" stereoAngle="0.0" width="48.92906951904297">
+    <ViewModel distance="60.87846374511719" far="121.75692749023438" near="0.15219613909721375" parallel="true" stereoAngle="0.0" width="27.395309448242188">
       <LookAtPoint x="0.0" y="0.0" z="0.0"/>
       <UpDirection x="0.0" y="1.0" z="0.0"/>
       <LookDirection x="0.0" y="0.0" z="-1.0"/>
