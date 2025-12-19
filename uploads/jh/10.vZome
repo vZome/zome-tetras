@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="111" field="golden" version="7.1">
-  <EditHistory editNumber="226" lastStickyEdit="216">
+  <EditHistory editNumber="243" lastStickyEdit="243">
     <StrutCreation anchor="0 0 0 0 0 0" index="37" len="2 4"/>
     <StrutCreation anchor="0 0 0 0 0 0" index="11" len="2 4"/>
     <BeginBlock/>
@@ -251,35 +251,35 @@
     <DeselectAll/>
     <ApplyTool copyColors="true" name="tool-6" selectInputs="true"/>
     <Delete/>
+    <ApplyTool copyColors="true" name="tool-5" selectInputs="true"/>
+    <Snapshot id="2"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-5" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-6" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-5" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-5" selectInputs="true"/>
+    <Hide/>
+    <Snapshot id="3"/>
+    <ShowHidden/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-6" selectInputs="true"/>
+    <Hide/>
+    <Snapshot id="4"/>
   </EditHistory>
-  <notes>
-    <page snapshot="0" title="Faces">
-      <ViewModel distance="96.43598937988281" far="192.8719482421875" near="0.2410900592803955" parallel="true" stereoAngle="0.0" width="43.39620590209961">
-        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-        <UpDirection x="0.0" y="1.0" z="0.0"/>
-        <LookDirection x="0.0" y="0.0" z="-1.0"/>
-      </ViewModel>
-      <content xml:space="preserve"/>
-    </page>
-    <page snapshot="1" title="Edges">
-      <ViewModel distance="96.43598937988281" far="192.8719482421875" near="0.2410900592803955" parallel="true" stereoAngle="0.0" width="43.39620590209961">
-        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-        <UpDirection x="0.0" y="1.0" z="0.0"/>
-        <LookDirection x="0.0" y="0.0" z="-1.0"/>
-      </ViewModel>
-      <content xml:space="preserve"/>
-    </page>
-  </notes>
+  <notes/>
   <sceneModel ambientLight="41,41,41" background="175,200,220">
     <directionalLight color="235,235,228" x="1.0" y="-1.0" z="-1.0"/>
     <directionalLight color="228,228,235" x="-1.0" y="0.0" z="0.0"/>
     <directionalLight color="30,30,30" x="0.0" y="0.0" z="-1.0"/>
   </sceneModel>
   <Viewing>
-    <ViewModel distance="96.43598937988281" far="192.8719482421875" near="0.2410900592803955" parallel="true" stereoAngle="0.0" width="43.39620590209961">
+    <ViewModel distance="96.43598937988281" far="192.8719482421875" near="0.2410900592803955" parallel="false" stereoAngle="0.0" width="43.39620590209961">
       <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-      <UpDirection x="0.0" y="1.0" z="0.0"/>
-      <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      <UpDirection x="0.6881909966468811" y="0.5877852439880371" z="-0.4253253936767578"/>
+      <LookDirection x="0.525731086730957" y="0.0" z="0.8506507873535156"/>
     </ViewModel>
   </Viewing>
   <SymmetrySystem name="icosahedral" renderingStyle="lifelike">
